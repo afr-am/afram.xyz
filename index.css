@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f9ca24;
+    font-family: 'Archivo', sans-serif;
+}
+
+#afram {
+    font-size: 10em;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
