@@ -1,27 +1,42 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #f9ca24;
-    font-family: 'Archivo', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Archivo', sans-serif;
+  background-image: url("img/forme.png");
+  background-repeat: no-repeat;
 }
 
 #afram {
-    font-size: 10em;
+  font-size: 10em;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color : black;
+}
+
+p {
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 812px) {
+  #afram {
+    font-size: 5em;
     text-align: center;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-p {
-    font-size: 1em;
-    text-align: center;
-    color: white;
-    margin: 0;
-    position: absolute;
-    top: 61%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color : black;
+  }
 }
