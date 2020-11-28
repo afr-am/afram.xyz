@@ -1,1 +1,361 @@
-<html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> <link rel="stylesheet" href="index.css"> <title>AFRAM</title> </head> <body> <div class="container"> <div class="slider"> <div class="box1 box"> <div class="bg"></div><div class="details"> <h1>Je suis Afram</h1> <p> Passionné par les nouvelles technologies, internet et l'innovation je suis toujours prêt à relever de nouveaux défis et me surpasser. <br>Jusqu'à présent mon parcours m'a permis d'élargir mon horizon de développeur. Du développement web au développement logiciel en passant par les bases de données, j'ai eu l'occasion de voir différentes spécialités très intéressantes qui me permettent d'avoir une certaine polyvalence en informatique. </p></div><div class="illustration"><div class="inner"></div></div></div><div class="box2 box"> <div class="bg"></div><div class="details"> <h1>Mes passions</h1> <p> En dehors du monde de l'informatique, je passe mon temps à me ressourcer grâce à la lecture mais aussi grâce à la méditation. <br>N'hésitez pas à me conseiller certains livres, ça me ferait plaisir ! </p></div><div class="illustration"><div class="inner"></div></div></div><div class="box3 box"> <div class="bg"></div><div class="details"> <h1>Mes projets</h1> <p> Grâce à mon parcours, mon experience, et mes compétences j'ai pu réaliser pas mal de projets. <br>L'inconvéniant ? Je n'aime pas partager un projet lorsque je ne suis pas satisfait de celui-ci, que ce sois au niveau du visuel ou du code en lui-même. </p><br><button><a href="https://github.com/afr-am"> Github</a></button> </div><div class="illustration"><div class="inner"></div></div></div><div class="box4 box"> <div class="bg"></div><div class="details"> <h1>Twitter</h1> <p> Twitter est certainement mon réseau social favori, il me permet d'assurer une veille technologique, d'apprendre et partager mes connaissances. <br>N'hésitez pas à me suivre ! </p><br><button><a href="https://twitter.com/iamafram"> Twitter</a></button> </div><div class="illustration"><div class="inner"></div></div></div><div class="box5 box"> <div class="bg"></div><div class="details"> <h1>Contactez-moi</h1> <p> Des questions ? Des suggestions ? Vous voulez papoter ? <br>N'hésitez pas, contactez-moi ! </p><br><button><a href="mailto:aframdiril@gmail.com">Contactez-moi</a></button> </div><div class="illustration"><div class="inner"></div></div></div></div><svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg> <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg> <div class="trail"> <div class="box1 active">1</div><div class="box2">2</div><div class="box3">3</div><div class="box4">4</div><div class="box5">5</div></div></div><script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script> <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> <script src="index.js">  // je me suis beaucoup (vraiment beacoup) inspiré d'ici : https://codepen.io/Akimzzy/pen/JjGKMoX </script> </body></html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AFRAM</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+        <link rel="stylesheet" href="assets/css/fonticons.css">
+        <link rel="stylesheet" href="assets/css/slider-pro.css">
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar-collapse">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <header id="main_menu" class="header navbar-fixed-top">            
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default" id="navmenu">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="index.html">
+                                            <img src="assets/images/icons/afram.png"/>
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <!-- <li><a href="aboutus.html">À propos</a></li> -->
+                                            <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="service.html">service page</a></li>
+                                                    <li><a href="service1.html">service page two</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="service.html">Mes projets</a></li>
+                                            <!-- <li class="dropdown"><a href="service.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Mes projets</a> -->
+                                                <!-- <ul class="dropdown-menu">
+                                                    <li><a href="work.html">work page</a></li>
+                                                    <li><a href="work1.html">Mes projets</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">blog</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="blog.html">blog page</a></li>
+                                                    <li><a href="bloginner.html">singleblog page</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="contact.html">Contacte</a></li>
+                                            <li><a href="contact.html">CV</a></li>
+                                        </ul>    
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>	
+                    </div>
+
+                </div>
+
+            </div>
+        </header> <!--End of header -->
+
+ 
+
+
+        <!-- Home Section -->
+        <section id="home" class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="main_home_slider text-center">
+
+                            <div class="single_home_slider">
+                                <div class="home-overlay"></div>
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <h2>Bienvenue sur mon protfolio !</h2>
+                                    <div class="separator"></div>
+                                    <p class="subtitle">Descend pour plus d'informations ;)
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <div class="home_btn">
+                                        <!-- <a href="https://github.com/afr-am" class="btn">Github</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of single_home_slider -->
+
+                            <div class="single_home_slider">
+                                <div class="home-overlay"></div>
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <h2>Merci de respecter les gestes barrières.</h2>
+                                    <div class="separator"></div>
+                                    <p class="subtitle">(afin d'éviter la propagation du virus)<br /> </p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="home_btn">
+                                        <!-- <a href="" class="btn">Learn More</a> -->
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End of single_home_slider -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End of Home Section -->
+
+
+
+
+        <!-- Service Section -->
+        <section id="service" class="service sections lightbg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="head_title text-center">
+                            <h1>Mais, qui suis-je?</h1>
+                        </div><!-- End of head title -->
+
+                        <div class="main_service_area"> 
+                            <div class="single_service_area">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="signle_service_left">
+                                            <img src="assets/images/photo_droite.jpg.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-push-1">
+                                        <div class="single_service">
+                                            <h3>Étudiant en </h3>
+                                            <h2>informatique</h2>
+                                            <div class="separator2"></div>
+                                            <p>Moi, c'est Afram, baigné depuis petit dans le monde de l'informatique, j'ai acquis, grâce à mon parcours un tas de connaissances. Et c'est grâce ces connaissances que j'ai pu réaliser ce portfolio qui a pour but de présenter les différents projets sur lesquels j'ai travaillé ces dernières années.
+                                           
+                                            <p>Rassurez-vous, l'informatique n'est pas ma seule passion. J'aime aussi lire, écouter de la musique mais aussi voyager et découvrir de nouveaux horizons. J'ai eu la chance de visiter certains pays tels que l'Allemagne, la Bulgarie, la Turquie, Malte. Grâce à cette expérience, j'ai pu découvrir et apprendre de nouvelles cultures et langues.
+
+                                               </p>
+
+                                            <a href="contact.html" class="btn btn-default">Contacte moi !</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End of single service area -->
+
+                            <div class="single_service_area  margin-top-80">
+                                <div class="row">
+
+                                    <div class="col-sm-6 col-sm-push-6">
+                                        <div class="signle_service_left">
+                                            <img src="assets/images/photo_gauche.png" alt="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-5 col-sm-pull-6">
+                                        <div class="single_service">
+                                            <h3>Mes</h3>
+                                            <h2>réalisations</h2>
+                                            <div class="separator2"></div>
+                                            <p>Au fil des années, de mon parcours, de ma vie, j'ai été ammené à réaliser des projets. Que ce soit des projets personnels, professionels ou universitaires, ces projets ont contribué à ma connaissance.</p>
+
+                                            <p>Je vous laisse les contempler :).</p>
+
+                                            <a href="service.html" class="btn btn-default">Mes projets</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- End of single service area -->
+
+                            <!-- Team Section -->
+        <section id="team" class="team colorsbg sections">
+            <div class="container">
+                <div class="row">
+                    <div class="main_team_area">
+                        <div class="head_title text-center">
+                            <h1>Mes compétences</h1>
+                        </div><!-- End of head title -->
+
+                        <div class="main_team text-center">
+                            <div class="single_team">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/java.png" alt="" />
+                                                <!-- <h2>Java</h2> -->
+                                                <div class="separator"></div>
+                                                <p>Java</p>
+                                            </div>
+                                        </div> <!-- End of col-sm-4 --> 
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/python.png" alt="" />
+                                                <!-- <h4>joshua spencer</h4> -->
+                                                <div class="separator"></div>
+                                                <p>python</p>
+                                            </div>
+                                        </div> <!-- End of col-sm-4 --> 
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/postgresql.png" alt="" />
+                                                <!-- <h4>diane lewis</h4> -->
+                                                <div class="separator"></div>
+                                                <p>postgresql</p>
+                                            </div>
+                                        </div><!-- End of col-sm-4 -->  
+                                    </div>
+                                </div><!-- End of col-sm-10 -->
+                            </div>
+                            <div class="single_team">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/php.png" alt="" />
+                                                <!-- <h4>paul hall</h4> -->
+                                                <div class="separator"></div>
+                                                <p>php</p>
+                                            </div>
+                                        </div> <!-- End of col-sm-4 --> 
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/git.png" alt="" />
+                                                <!-- <h4>joshua spencer</h4> -->
+                                                <div class="separator"></div>
+                                                <p>php</p>
+                                            </div>
+                                        </div><!-- End of col-sm-4 -->  
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/linux.png" alt="" />
+                                                <!-- <h4>diane lewis</h4> -->
+                                                <div class="separator"></div>
+                                                <p>php</p>
+                                            </div>
+                                        </div> <!-- End of col-sm-4 --> 
+                                    </div>
+                                </div><!-- End of col-sm-10 -->
+                            </div>
+                            <div class="single_team">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/javascript.png" alt="" />
+                                                <!-- <h4>paul hall</h4> -->
+                                                <div class="separator"></div>
+                                                <p>javascript</p>
+                                            </div>
+                                        </div><!-- End of col-sm-4 -->  
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/html.png" alt="" />
+                                                <!-- <h4>joshua spencer</h4> -->
+                                                <div class="separator"></div>
+                                                <p>html</p>
+                                            </div>
+                                        </div> <!-- End of col-sm-4 --> 
+                                        <div class="col-sm-4">
+                                            <div class="team">
+                                                <img class="img-circle" src="assets/images/icons/css.png" alt="" />
+                                                <!-- <h4>diane lewis</h4> -->
+                                                <div class="separator"></div>
+                                                <p>css</p>
+                                            </div>
+                                        </div><!-- End of col-sm-4 -->  
+                                    </div>
+                                </div><!-- End of col-sm-10 -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End of row -->
+            </div><!-- End of Contaier -->
+        </section><!-- End of portfolio Section --> 
+
+
+        <!-- Clients Section -->
+
+        <!-- End of portfolio Section --> 
+
+        <!-- START SCROLL TO TOP  -->
+
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/js/masonry/masonry.min.js"></script>
+        <script type="text/javascript">
+            $('.mixcontent').masonry();
+        </script>
+
+        <script src="assets/js/jquery.sliderPro.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function ($) {
+                $('#example3').sliderPro({
+                    width: 960,
+                    height: 200,
+                    fade: true,
+                    arrows: false,
+                    buttons: true,
+                    fullScreen: false,
+                    shuffle: true,
+                    smallSize: 500,
+                    mediumSize: 1000,
+                    largeSize: 3000,
+                    thumbnailArrows: true,
+                    autoplay: false,
+                    thumbnailsContainerSize: 960
+
+                });
+            });
+        </script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
